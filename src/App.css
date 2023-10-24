@@ -14,7 +14,8 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  /* background-color: #b1c7bd; */
+  background: linear-gradient(#b1c7bd, #6ca38a);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
