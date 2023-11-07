@@ -8,7 +8,6 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 
 import './ButtonAppBar.css';
-import ButtonNavBar from './ButtonNavBar';
 
 export default function MyAppBar() {
   return (
@@ -21,22 +20,26 @@ export default function MyAppBar() {
      }}  
       >
         <Toolbar>
-          <IconButton
+          {/* <IconButton
             size="large"
             edge="start"
             color="inherit"
             aria-label="menu"
             sx={{ mr: 2 }}
           >
-            <MenuIcon />
-          </IconButton>
-          <Button variant="h5" component="div" sx={{ flexGrow: 1 }}>
+          </IconButton> */}
+          <Button variant="h5" component="div" sx={{ flexGrow: 1 }} href='/'>
             Accueil
           </Button>
-          <Button variant="h5" component="div" sx={{ flexGrow: 1 }}>
+          <Button variant="h5" component="div" sx={{ flexGrow: 1 }} href="/backlog">
             BackLog
           </Button>
-          <Button color="inherit">Se connecter</Button>
+          <Button variant="h5" component="div" sx={{ flexGrow: 1 }} href="/sprint">
+            Sprint
+          </Button>
+          <Button variant="h5" component="div" sx={{ flexGrow: 1 }} to="/about">
+            About
+          </Button>
         </Toolbar>
       </AppBar>
     </Box>

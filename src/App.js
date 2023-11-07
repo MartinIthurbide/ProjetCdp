@@ -1,6 +1,10 @@
 import './App.css';
 import { useState } from 'react';
-import MyAppBar from './Menu/AppBar';
+import MyAppBar from './components/menu/AppBar';
+import SignUp from './components/homepage/contact';
+import ProjectComponent from './components/homepage/ProjectComponent';
+import { BrowserRouter as Router, Routes, Route }
+    from 'react-router-dom';
 
 function MyButton() {
   const [count, setCount] = useState(0);
@@ -20,17 +24,13 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <MyAppBar />
-        <h1>Conduite de Projet</h1>
-        <MyButton />
-        {/* <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a> */}
+        <Router>
+          <MyAppBar />
+          <Routes>
+            <Route exact path='/' element={<ProjectComponent />} />
+            <Route path='/about' element={<SignUp />} />
+          </Routes>
+        </Router>
       </header>
     </div>
   );
