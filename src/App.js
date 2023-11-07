@@ -1,6 +1,6 @@
-import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react';
+import MyAppBar from './Menu/AppBar';
 
 function MyButton() {
   const [count, setCount] = useState(0);
@@ -20,6 +20,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <MyAppBar />
         <h1>Conduite de Projet</h1>
         <MyButton />
         {/* <a
