@@ -6,6 +6,7 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
+import {Link} from 'react-router-dom';
 
 import './ButtonAppBar.css';
 
@@ -28,18 +29,10 @@ export default function MyAppBar() {
             sx={{ mr: 2 }}
           >
           </IconButton> */}
-          <Button variant="h5" component="div" sx={{ flexGrow: 1 }} href='/'>
-            Accueil
-          </Button>
-          <Button variant="h5" component="div" sx={{ flexGrow: 1 }} href="/backlog">
-            BackLog
-          </Button>
-          <Button variant="h5" component="div" sx={{ flexGrow: 1 }} href="/sprint">
-            Sprint
-          </Button>
-          <Button variant="h5" component="div" sx={{ flexGrow: 1 }} to="/about">
-            About
-          </Button>
+          <Link to={'/'} className='buttonNavBar'>Accueil</Link>
+          <Link to={'/backlog'} className='buttonNavBar'>BackLog</Link>
+          <Link to={'/sprint'} className='buttonNavBar'>Sprint</Link>
+          <Link to={'/about'} className='buttonNavBar'>About</Link>
         </Toolbar>
       </AppBar>
     </Box>

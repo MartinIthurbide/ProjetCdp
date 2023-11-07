@@ -2,7 +2,7 @@ import './App.css';
 import { useState } from 'react';
 import MyAppBar from './components/menu/AppBar';
 import SignUp from './components/homepage/contact';
-import ProjectComponent from './components/homepage/ProjectComponent';
+import Accueil from './components/homepage/Accueil';
 import { BrowserRouter as Router, Routes, Route }
     from 'react-router-dom';
 
@@ -27,8 +27,8 @@ function App() {
         <Router>
           <MyAppBar />
           <Routes>
-            <Route exact path='/' element={<ProjectComponent />} />
-            <Route path='/about' element={<SignUp />} />
+            <Route exact path='/' element={<Accueil/>} />
+            <Route path='/about' element={<SignUp/>} />
           </Routes>
         </Router>
       </header>
