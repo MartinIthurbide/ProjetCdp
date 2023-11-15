@@ -1,17 +1,15 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
 import {Link} from 'react-router-dom';
 
 import './ButtonAppBar.css';
 
-export default function MyAppBar() {
+export default function MyAppBar({ dynamicLinks }) {
+
   return (
+
     <Box sx={{ flexGrow: 1 }}>
       <AppBar 
         position="static"
@@ -20,7 +18,7 @@ export default function MyAppBar() {
 
      }}  
       >
-        <Toolbar>
+        <Toolbar id="menuBar">
           {/* <IconButton
             size="large"
             edge="start"
@@ -30,9 +28,14 @@ export default function MyAppBar() {
           >
           </IconButton> */}
           <Link to={'/'} className='buttonNavBar'>Accueil</Link>
-          <Link to={'/backlog'} className='buttonNavBar'>BackLog</Link>
+          {/* <Link to={'/backlog'} className='buttonNavBar'>BackLog</Link>
           <Link to={'/sprint'} className='buttonNavBar'>Sprint</Link>
-          <Link to={'/about'} className='buttonNavBar'>About</Link>
+          <Link to={'/about'} className='buttonNavBar'>About</Link> */}
+          {dynamicLinks && dynamicLinks.length > 0 && dynamicLinks.map((link, index) => (
+            <React.Fragment key={index}>
+              {link}
+            </React.Fragment>
+          ))}
         </Toolbar>
       </AppBar>
     </Box>

@@ -1,11 +1,19 @@
-import listOfProjet from "./ListOfProjets";
+import React, { useState } from 'react';
+import MyAppBar from '../menu/AppBar';
+import ListOfProjets from "./ListOfProjets";
 import './Accueil.css';
 
-function Accueil () {
+function Accueil({ addDynamicLink }) {
+
     return (
-    <div className="projects">
-        {listOfProjet()}
-    </div>
+        <div>
+            <div className="accueilTitre">
+                <h1>Titre Appli</h1>
+            </div>
+            <div className="projects">
+                <ListOfProjets addDynamicLink={addDynamicLink} />
+            </div>
+        </div>
     );
 }
 
