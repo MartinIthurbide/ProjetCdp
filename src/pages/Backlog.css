@@ -1,0 +1,8 @@
+.backlog-div {
+  height: 80vh;
+  width: 100vw;
+  padding: 10px;
+  position: fixed;
+  top: 10vh;
+  left: 0;
+}

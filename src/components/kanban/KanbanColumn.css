@@ -1,0 +1,33 @@
+/* Column.css */
+.column {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+  }
+  
+  h2 {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  .add-task {
+    display: inline-block;
+  }
+  
+  .btnAddTask {
+    background-color: #af4c4c;
+    border-radius: 20px;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .popup {
+    /* Your styles for the popup */
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-top: 10px;
+  }
+  
